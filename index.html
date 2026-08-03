@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-    <meta charset="UTF-8">
-    <title>웨스테로스</title>
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="preconnect" herf="https://fonts.googleapis.com">
-    <link rel="preconnect" herf="https://fonts.googleapis.com" crossorigin>
-    <link herf="https://fonts.googleapis.com\css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="kingdom">
-      <h1>칠왕국 지도</h1>
-      
-      <img src="westeros.png" class="map"></a>
-      
-</div>
+        <div class="box">
+            <h1>🔢숫자야구🥎</h1>
+            <button id="restart" class="restart">새 게임 시작</button>
+            <div class="play">
+            <input type="text"
+            id="number"
+            placeholder="guess the answer">
+            <button id="submit" class="submit">제출</button>
+            </div>
+            <div id="list"></div>
 
+            <button id="answer" class="answer">정답 보기</button>
+            
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>
