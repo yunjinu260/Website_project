@@ -1,0 +1,29 @@
+
+
+.show{
+
+display:flex;
+
+gap:15px;
+
+justify-content:center;
+
+background:white;
+
+font-size: 40px;
+
+
+
+
+}
+.card{
+    background : purple;
+
+    color:white;
+     
+    width:50px;
+
+    text-align:center;
+
+    border-radius: 10px;
+}

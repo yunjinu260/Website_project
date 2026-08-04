@@ -8,17 +8,29 @@
         <div class="box">
             <h1>🔢숫자야구🥎</h1>
             <button id="restart" class="restart">새 게임 시작</button>
+            <div class="show">
+                <div class="card" >0</div>
+                <div class="card" >0</div>
+                <div class="card">0</div>
+                <div class="card">0</div>
+    
+            </div>
+                
             <div class="play">
-            <input type="text"
-            id="number"
-            placeholder="guess the answer">
+            <div class="input">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+            </div>
+            
             <button id="submit" class="submit">제출</button>
             </div>
             <div id="list"></div>
 
             <button id="answer" class="answer">정답 보기</button>
-            
+           
         </div>
         <script src="script.js"></script>
-    </body>
+       </body>
 </html>
