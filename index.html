@@ -5,9 +5,11 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="box">
-            <h1>🔢숫자야구🥎</h1>
+        <div class="playground">
+            <h1>🔢숫자야구
+        <div class="box">🥎</h1>
             <button id="restart" class="restart">새 게임 시작</button>
+
             <div class="show">
                 <div class="card" >0</div>
                 <div class="card" >0</div>
@@ -18,19 +20,23 @@
                 
             <div class="play">
             <div class="input">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
+                <input type="text" class="paper">
+                <input type="text" class="paper">
+                <input type="text" class="paper">
+                <input type="text" class="paper">
+
+                <button id="submit" class="submit">제출</button>
             </div>
             
-            <button id="submit" class="submit">제출</button>
+            
             </div>
             <div id="list"></div>
 
             <button id="answer" class="answer">정답 보기</button>
            
         </div>
+
+    </div>
         <script src="script.js"></script>
        </body>
 </html>
