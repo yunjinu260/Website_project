@@ -11,7 +11,7 @@ let ans = [];
 btnres.addEventListener("click", ()=>{
     ans = [];
     while(ans.length < 4){
-        let num = (Math.floor(Math.random()*9)+1);
+        let num = Number((Math.floor(Math.random()*9)+1));
         if(!ans.includes(num)){
         ans.push(num);}
     }
@@ -52,10 +52,10 @@ function submit(){
 
     for(let i = 0; i<4; i++){
        for(let j = 0; j<4; j++){
-        if(n[i] == papers[j].value && i == j){
+        if(ans[i] == Number(papers[j].value) && i == j){
             s++;
         }
-        else if(n[i] == papers[j].value && i != j){
+        else if(ans[i] == Number(papers[j].value) && i != j){
             b++;
         }
        }
@@ -71,6 +71,17 @@ function submit(){
 
     const hint = document.createElement("div");
     hint.textContent = `${s}S ${b}B`;
+    if(s+b >= 4){
+        hint.textContent = "정답!";
+        hint.style.color = "red";
+    }
+    else if(s+b >= 3){
+        hint.style.color = "orange";
+    }
+    else if(s+b >= 2){
+        hint.style.color = "green";
+    }
+
     item.appendChild(hint);
    
    
