@@ -34,7 +34,13 @@ papers.forEach((input, index) => {
          if(e.key == "Backspace" && input.value==""&& index>0){
             papers[index-1].focus();
          }
+
+         if(e.key == "Enter"){
+           submit();
+    }
     });
+
+     
 });
 
 function submit(){
@@ -83,12 +89,17 @@ function submit(){
     }
 
     item.appendChild(hint);
-   
-   
-    
 
     list.appendChild(item);
+
+    papers.forEach((input, index)=>{
+       input.value = "";
+       papers[0].focus();
+    });
+
+   
 }
 btnsub.addEventListener("click", ()=>{
     submit();
 });
+
