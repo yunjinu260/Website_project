@@ -8,6 +8,9 @@ const n = document.querySelectorAll(".card");
 
 let ans = [];
 
+
+
+
 btnres.addEventListener("click", ()=>{
     ans = [];
     while(ans.length < 4){
@@ -19,8 +22,17 @@ btnres.addEventListener("click", ()=>{
     for(let i = 0; i<4; i++){
        n[i].textContent = ans[i];
     }
+   
+   for(let i = 0; i<4; i++ ){
+      n[i].style.color = "purple";
+   }
 
+    
+  list.innerHTML = "";
 });
+
+
+
 papers.forEach((input, index) => {
      input.addEventListener("input", ()=>{
      
@@ -40,8 +52,11 @@ papers.forEach((input, index) => {
     }
     });
 
-     
+    
 });
+
+
+
 
 function submit(){
     for(let i of papers){
@@ -77,8 +92,7 @@ function submit(){
 
     const hint = document.createElement("div");
     hint.textContent = `${s}S ${b}B`;
-    if(s+b >= 4){
-        hint.textContent = "정답!";
+    if(s+b >= 4 && s!=4 ){
         hint.style.color = "red";
     }
     else if(s+b >= 3){
@@ -86,6 +100,10 @@ function submit(){
     }
     else if(s+b >= 2){
         hint.style.color = "green";
+    }
+    else if(s == 4){
+        hint.textContent = "정답!";
+        hint.style.color = "yellow";
     }
 
     item.appendChild(hint);
@@ -101,5 +119,11 @@ function submit(){
 }
 btnsub.addEventListener("click", ()=>{
     submit();
+});
+
+btnans.addEventListener("click", ()=>{
+   for(let i = 0; i<4; i++ ){
+      n[i].style.color = "white";
+   }
 });
 
