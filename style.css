@@ -25,6 +25,15 @@ body{
 
     padding:20px;
 }
+
+.item{
+    font-size:40px;
+    
+    display:flex;
+    
+    justify-content:space-between;
+}
+
 .restart{
     width:100px;
 

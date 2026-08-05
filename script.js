@@ -42,12 +42,42 @@ function submit(){
     if(i.value==""){
         return;
     }}
-    let num = 0;
-    for(let j = 0; j<4; j++){
-        num = num + papers[i]*(10^(3-i));
+    let num = "";
+    for(let i of papers){
+        num = num + `${i.value} `;
     }
+
+    let s = 0;
+    let b = 0;
+
+    for(let i = 0; i<4; i++){
+       for(let j = 0; j<4; j++){
+        if(n[i] == papers[j].value && i == j){
+            s++;
+        }
+        else if(n[i] == papers[j].value && i != j){
+            b++;
+        }
+       }
+    }
+
+
     const item = document.createElement("div");
-    item.textContent = `${num}`;
+    item.classList.add("item");
+
+    const reply = document.createElement("div");
+    reply.textContent = num;
+    item.appendChild(reply);
+
+    const hint = document.createElement("div");
+    hint.textContent = `${s}S ${b}B`;
+    item.appendChild(hint);
+   
+   
+    
 
     list.appendChild(item);
 }
+btnsub.addEventListener("click", ()=>{
+    submit();
+});
